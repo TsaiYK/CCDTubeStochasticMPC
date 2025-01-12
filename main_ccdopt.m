@@ -70,7 +70,7 @@ end
 if strcmp(DesignStrategy,'seqdesign')
     x_opt = []; fval = [];
     for i = 1:length(theta_p_opt)
-        [K_opt{i},fval_iter{i},M{i}] = runobjconstr_p3ga(theta_p_opt(i),SaveLoc_dir,DesignStrategy,i,W_constr_handling);
+        [K_opt{i},fval_iter{i},M{i}] = runobjconstr(theta_p_opt(i),SaveLoc_dir,DesignStrategy,i,W_constr_handling);
         x_opt_tmp = [repmat(theta_p_opt(i),size(K_opt{i},1),1),K_opt{i}];
         x_opt = [x_opt;x_opt_tmp];
         fval = [fval;fval_iter{i}]; 
