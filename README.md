@@ -15,6 +15,7 @@ These codes provide the CCD optimization and the stochastic model predictive con
 # CCD Optimization
 1. 'main_ccdopt.m': This MATLAB script sets up and executes a multi-objective optimization problem for different design strategies in control systems. The script is flexible in handling different system types (2D numerical or 4D satellite) and design approaches, making it suitable for various control system optimization scenarios. 
 2. 'runobjconstr.m': The MATLAB function solves the multi-objective optimization problems including the functions of objectives and constraints. The user can change the optimization from "p3ga" to your preferred optimization tool (e.g., ga: https://www.mathworks.com/help/gads/ga.html).
+3. 'func_tubeSMPC.m': The MATLAB function implements a tube-based SMPC simulation for linear systems with disturbances, which is very similar to what 'main_sim.m' is doing. The function handles infeasible designs by returning NaN values for both outputs, making it suitable for use in optimization algorithms for CCD problems.
 
 You can install the MPT3 package and get the folder 'tbxmanager' via https://www.mpt3.org/.
 
