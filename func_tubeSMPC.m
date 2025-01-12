@@ -61,9 +61,6 @@ elseif sum(find(isinf(Ak_inf)),'all') || sum(find(isnan(Ak_inf)),'all')
 elseif norm(eig(Ak_inf))>1e-2
     V_N = NaN;
     Size_Sigma_e = NaN;
-    %     elseif ~(x_curr<=mpc.XMPI) % check if the final state is in the MPI set
-    %         V_N = NaN;
-    %         Size_Sigma_e = NaN;
 else
     clear('mpc')
     % Computing the norm of the eigenvalues of the Sigma_e_{\infty}
