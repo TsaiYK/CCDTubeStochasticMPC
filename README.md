@@ -5,6 +5,9 @@ These codes provide the CCD optimization and the stochastic model predictive con
 # SMPC Solution
 
 ![Stochastic tube-based MPC on a state plane.](results_mpc_test/GIF_plane.gif)
+![Stochastic tube-based MPC for state trajectories.](results_mpc_test/GIF_state.gif)
+![Stochastic tube-based MPC for input trajectories.](results_mpc_test/GIF_ctrl.gif)
+
 1. 'main_sim.m': The script implements a Stochastic Model Predictive Control (SMPC) simulation for a linear system with disturbances, including state and control constraint tightening, dynamic iteration, and visualization of results through plots and animated GIFs.
 2. 'ConstraintTigtening.m': This MATLAB class handles constraint tightening for Model Predictive Control (MPC) with stochastic disturbances. It computes nominal constraint parameters, time-varying constraint sets, and terminal constraint sets for state and input variables. The class includes methods for finding nominal constraints, constructing time-varying constraint sets, and calculating the nominal terminal set.
 3. 'ellipsedata.m': This function generates data points for ellipses representing contour curves of Gaussian distributions with specified covariance and mean. It's useful for visualizing confidence intervals in 2D space. The function takes inputs for covariance matrix, center point, number of points, and sigma rule, returning a matrix of ellipse data points.
