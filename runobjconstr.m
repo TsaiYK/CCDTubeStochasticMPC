@@ -1,4 +1,4 @@
-function [x_opt,fval,M] = runobjconstr_p3ga(xp,SaveLoc_dir,DesignStrategy,i,W_constr_handling)
+function [x_opt,fval,M] = runobjconstr(xp,SaveLoc_dir,DesignStrategy,i,W_constr_handling)
 
 xLast = []; % Last place computeall was called
 myf1 = []; % Use for objective at xLast
